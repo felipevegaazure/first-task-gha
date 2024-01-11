@@ -1,0 +1,41 @@
+name: task
+on: push
+jobs:
+  task1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: get code
+        uses: actions/actions/checkout@v3
+      - name: install dependencies
+        run: npm ci
+      - name: run lint
+        run: npm run lint
+  task2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: get code
+        uses: actions/actions/checkout@v3
+      - name: install dependencies
+        run: npm ci
+      - name: run test
+        run: npm run test
+  task3:   
+    runs-on: ubuntu-latest
+    steps:
+      - name: get code
+        uses: actions/actions/checkout@v3
+      - name: install dependencies
+        run: npm ci
+      - name: build code
+        run: npm run build
+  task4:
+    runs-on: ubuntu-latest
+    steps:
+      - name: get code
+        uses: actions/actions/checkout@v3
+      - name: install dependencies
+        run: npm ci
+      - name: messaged
+        run: echo "Done!!!... Deploying"     
+    
+         
